@@ -31,15 +31,15 @@ const Home = () => {
         }) 
     }
 
-    return loading ? <div>Loading...</div> : (
-        <div>
+    return loading ? <div id='loading'>Loading...</div> : (
+        <>
             <h1>User List</h1>
             <ul>
                 {
                     data.map((user) => <li key={user.id}><Link to={'/users/'+user.id}>{user.name}</Link></li>)
                 }
             </ul>
-        </div>
+        </>
     )
 }
 

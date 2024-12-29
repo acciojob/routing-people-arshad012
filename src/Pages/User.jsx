@@ -32,15 +32,15 @@ const User = () => {
         }) 
     }
 
-    return loading ? <div>Loading...</div> : (
-        <div>
+    return loading ? <div id='loading'>Loading...</div> : (
+        <>
             <h1>User Details</h1>
             <p><span className='bold'>Name: </span>{user.name}</p>
             <p><span className='bold'>Username: </span>{user.username}</p>
             <p><span className='bold'>Email: </span>{user.email}</p>
             <p><span className='bold'>Phone: </span>{user.phone}</p>
             <p><span className='bold'>Website: </span>{user.website}</p>
-        </div>
+        </>
     )
 }
 

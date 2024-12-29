@@ -32,7 +32,7 @@ const User = () => {
         }) 
     }
 
-    return (
+    return loading ? <div>Loading...</div> : (
         <div>
             <h1>User Details</h1>
             <p><span className='bold'>Name: </span>{user.name}</p>

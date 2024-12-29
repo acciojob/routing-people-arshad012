@@ -31,7 +31,7 @@ const Home = () => {
         }) 
     }
 
-    return (
+    return loading ? <div>Loading...</div> : (
         <div>
             <h1>User List</h1>
             <ul>

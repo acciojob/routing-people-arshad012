@@ -9,10 +9,8 @@ const getData =  async () => {
 
 const Home = () => {
     const [data, setData] = useState([]);
-    const [loading, setLoading] = useState(false);
 
     useEffect(() => {
-        setLoading(true);
         fetchUsers();
     },[])
 
@@ -22,17 +20,16 @@ const Home = () => {
             return res.json();
         })
         .then((data) => {
-            setLoading(false);
             setData(data);
         })
         .catch(error => {
             console.log(error);
-            setLoading(false);
         }) 
     }
 
-    return loading ? <div id='loading'>Loading...</div> : (
+    return (
         <>
+            <div id='loading'>Loading...</div>
             <h1>User List</h1>
             <ul>
                 {
